@@ -11,10 +11,35 @@ export default new Router({
       component: require('@/components/LandingPage').default
     },
     {
-      path: '/twitter',
-      name: 'twitter',
-      component: require('@/components/Twitter').default
+      path: "/twitter",
+      component: require('@/components/SimpleLayout').default,
+      children: [
+        {
+          path: "",
+          name: "Twitter",
+          component: require('@/components/Twitter').default
+        },
+      ]
     },
+
+    {
+      path: "/linkedin",
+      component: require('@/components/SimpleLayout').default,
+      children: [
+        {
+          path: "",
+          name: "LinkedIn",
+          component: require('@/components/LinkedIn').default
+        },
+      ]
+    },
+
+    // {
+    //   path: '/twitter',
+    //   name: 'twitter',
+    //   component: require('@/components/Twitter').default
+    // },
+
     {
       path: '*',
       redirect: '/'

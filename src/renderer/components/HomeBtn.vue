@@ -1,9 +1,9 @@
 <template>
   <div>
-        <router-link to="/" class="home-btn">
-          <i class="fas fa-arrow-alt-circle-left"></i>
-          <span>Go Home</span>
-        </router-link>
+    <router-link to="/" class="home-btn">
+      <i class="fas fa-home"></i>
+      <span>Home</span>
+    </router-link>
   </div>
 </template>
 
@@ -13,7 +13,7 @@ export default {};
 
 <style lang="scss">
 .home-btn {
-  width: 8rem;
+  max-width: 7rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,11 +22,10 @@ export default {};
   padding: 0.3rem 0.5rem;
   color: #542fb1;
   transition: all 200ms ease-in-out;
+    font-size: 1.2rem;
 
   i {
-    // padding: 0 1rem 0 0;
     font-size: 1.8rem;
-    transition: all 200ms ease-in-out;
   }
 
   &:hover {

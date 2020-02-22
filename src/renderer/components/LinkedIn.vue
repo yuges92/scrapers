@@ -1,18 +1,11 @@
 <template>
   <div class="card">
     <div class="card-body">
-      <form v-on:submit.prevent="runTwitter">
+      <form v-on:submit.prevent="run">
         <div class="form-group row">
           <label for="company-name" class="col-sm-4 col-form-label">Company Name</label>
           <div class="col">
-            <input type="text" class="form-control" id="company-name" placeholder="Company Name">
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="any-words" class="col-sm-4 col-form-label">Any of these words</label>
-          <div class="col">
-            <input type="text" class="form-control" id="any-words" placeholder="Any of these words">
+            <input type="text" class="form-control" id="company-name" placeholder="Company Name" />
           </div>
         </div>
 
@@ -45,6 +38,9 @@
 </template>
 
 <script>
+const { app, BrowserWindow } = require("electron");
+let win;
+
 export default {
   data() {
     return {
@@ -52,9 +48,19 @@ export default {
     };
   },
   methods: {
-    runTwitter() {
-      console.log("Running");
+    run() {
       this.running = true;
+      this.notify();
+    },
+
+    notify() {
+      let myNotification = new Notification("Scraper", {
+        body: "Linkedin scraper started"
+      });
+
+      myNotification.onclick = () => {
+        console.log("Notification clicked");
+      };
     }
   }
 };

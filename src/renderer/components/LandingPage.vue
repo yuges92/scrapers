@@ -1,15 +1,14 @@
 <template>
   <div id="wrapper">
     <main>
-      
       <h1 class="main-title text-center">Scrapers</h1>
       <div class="container-fluid scraper-btns-container">
-        <router-link to="Twitter" class="scraper-btn">
+        <router-link to="twitter" class="scraper-btn">
           <i class="fab fa-twitter"></i>
           <span>Twitter</span>
         </router-link>
 
-        <router-link to="Twitter" class="scraper-btn">
+        <router-link to="linkedin" class="scraper-btn">
           <i class="fab fa-linkedin-in"></i>
           <span>Linkedin</span>
         </router-link>
@@ -20,13 +19,18 @@
         </router-link>
 
         <router-link to="Twiiter" class="scraper-btn">
-          <i class="fab fa-twitter"></i>
+          <i class="fas fa-info"></i>
           <span>Indeed</span>
         </router-link>
 
         <router-link to="Twiiter" class="scraper-btn">
-          <i class="fab fa-twitter"></i>
+          <i class="fab fa-goodreads"></i>
           <span>Glassdoor</span>
+        </router-link>
+
+        <router-link to="Twiiter" class="scraper-btn">
+          <i class="fab fa-twitter"></i>
+          <span>Another</span>
         </router-link>
       </div>
     </main>
@@ -58,7 +62,7 @@ export default {
 }
 
 .main-title {
-  color: #4c00ff;
+  color: #542fb1;
 }
 .scraper-btns-container {
   display: flex;
@@ -66,7 +70,7 @@ export default {
   flex-wrap: wrap;
   .scraper-btn {
     margin: 1rem;
-    background-color: #4c00ff;
+    background-color: #542fb1;
     color: #fff;
     font-size: 2rem;
     padding: 3rem;
@@ -77,9 +81,8 @@ export default {
     display: flex;
     flex-direction: column;
 
-    &:hover{
-    background-color: #552ead;
-
+    &:hover {
+      background-color: #4c00ff;
     }
   }
 }
