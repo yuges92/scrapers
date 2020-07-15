@@ -1,7 +1,5 @@
 # scraper
 
-> Scraper for Linkhumans
-
 #### Build Setup
 
 ``` bash
